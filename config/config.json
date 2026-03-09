@@ -1,0 +1,41 @@
+{
+  "_comment": "OpenAI 兼容 API 并发测试配置文件",
+
+  "docker_container_name": "vllm-Qwen3.5-27B-seqs32",
+  "_comment_docker_container_name": "vllm 容器名称",
+  
+  "test_result_remarks": "T10x4-vllm-tp4-Qwen3.5-27B-FP8 PP20 TG256",
+  "_comment_test_result_remarks": "测试结果备注",
+
+  "max_concurrent": 32,
+  "_comment_max_concurrent": "最大测试并发数",
+
+  "step": 2,
+  "_comment_step": "并发递增步长（1 → step*1 → step*2 → ...）",
+
+  "api_url": "http://127.0.0.1:8080/v1/chat/completions",
+  "_comment_api_url": "API endpoint 地址",
+
+  "api_key": "api-key-abc123",
+  "_comment_api_key": "API Key",
+
+  "model": "Qwen3.5-27B",
+  "_comment_model": "模型名称",
+
+  "max_tokens": 256,
+  "_comment_max_tokens": "生成 token 上限值；建议取值 128–512，过小会影响吞吐量测试准确性",
+
+  "temperature": 0.6,
+  "_comment_temperature": "温度 (0.0~2.0)",
+
+  "top_p": 0.95,
+  "_comment_top_p": "top_p (0.0~1.0)",
+
+  "request_timeout": 90,
+  "_comment_request_timeout": "单请求超时秒数",
+
+  "interval_between_batches": 2,
+  "_comment_interval_between_batches": "批次间等待时间（秒）",
+
+  "_comment_end": "保存为 config.json，与脚本同目录"
+}
