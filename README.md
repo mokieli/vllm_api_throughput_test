@@ -123,7 +123,7 @@ python step_4_plot_throughput.py --en
 
 以下是测试结果图表示例：
 
-![吞吐量测试结果图表](output/throughput_charts.png)
+![吞吐量测试结果图表](output/throughput_charts-pp20tg512.png)
 
 ## 注意事项
 
@@ -131,3 +131,4 @@ python step_4_plot_throughput.py --en
 2. 测试过程中，建议保持网络稳定，避免网络波动影响测试结果。
 3. 对于高并发测试，确保服务器资源充足，避免因资源不足导致测试结果不准确。
 4. 测试完成后，可以通过 `throughput_charts.png` 图表直观查看不同并发数下的吞吐量表现。
+
